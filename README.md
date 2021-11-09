@@ -155,8 +155,11 @@ Expected performance of IGNNE in the external validation experiments:
 ```  
 >>> TrainAuc: 0.913, TrainSen: 0.828, TrainSpe: 0.881, TrainHR: 14.040, TrainC: 0.848, 
     TestAuc: 0.877, TestSen: 0.750, TestSpe: 0.893, TestHR: 8.40, TestC: 0.795    
-```  
-
+```    
+For more detailed about the configuration of models and experiments, please refer to the`./experiments/configs/configs.py` and `./experiments/configs/*.toml` or launch the procedure as following:  
+``` 
+python main.py -h
+``` 
 
 
 
