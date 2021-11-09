@@ -27,4 +27,10 @@ pip install openpyxl
 pip install bitarray
 pip install dec2bin
 ```
+Install the Pytorch and PyTorch-Geometric (A library built upon PyTorch to develop Graph Neural Networks https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#quick-start) within the activated virtual environment  
+(IGNN):
+```  
+conda install pytorch==1.6.0 torchvision==0.7.0 torchaudio cudatoolkit=${CUDATOOLKIT} -c pytorch
+pip install torch-geometric==1.6.1
+```
 
