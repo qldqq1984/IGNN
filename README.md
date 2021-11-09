@@ -210,7 +210,7 @@ The predictions of the well-trained model on the training and test data will be 
 ```
 user_train_cohort_IGNNE.xlsx ;  user_test_cohort_IGNNE.xlsx
 ```  
-For more detailed, please refer to the`./experiments/configs/user_configs.py` and `./experiments/configs/user_config.toml` or launch the procedure as following:
+For more detailed, please refer to the `./experiments/configs/user_configs.py` and `./experiments/configs/user_config.toml` or launch the procedure as following:
 ```
 python main_user.py -h
 ```
