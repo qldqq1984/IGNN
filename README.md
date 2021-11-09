@@ -70,7 +70,7 @@ The main components of the source code as following:
 * `./experiments/ Patients_Information /DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital (FMU) and Harbin Medical University Cancer Hospital (HMU).  
 * `./experiments/ Patients_Information /DataSets_demo/`. The user-defined data of patients.
 * `./experiments/graphdataset_utils/`. The directory includes main functional modules for constructing graph structures and generating graphdataset.  
-* `./experiments/Graphdatasets/`. This directory saves the specific graphdatasets generated from the raw data (`TACS_G`) and the user-defined data (`User_G`).  
+* `./experiments/Graphdatasets/`. This directory saves the specific graphdatasets generated from the raw data (TACS_G) and the user-defined data (User_G).  
 * `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN (IGNNE) models with the functional modules for model adaptive training and verification.
 * `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. ROC-AUC, Sensitivity, Specificity, HR, Cindex).  
 * `./experiments/models_parameters/Train/`. Model parameters at each epoch during the training processing.  
