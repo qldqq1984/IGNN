@@ -91,7 +91,7 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
 
 ```      
-The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Execl files in the ./experiments/ experiment_results/ directory:
+The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Execl files in the `./experiments/ experiment_results/` directory:
 ```   
 pre_train_cohort_fold1_IGNN.xlsx ;  pre_test_cohort_fold1_IGNN.xlsx
 pre_train_cohort_fold2_IGNN.xlsx ;  pre_test_cohort_fold2_IGNN.xlsx
