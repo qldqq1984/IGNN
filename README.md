@@ -36,4 +36,14 @@ pip install torch-geometric==1.6.1
 ```
 where ${CUDATOOLKIT} should be replaced by the specific CUDA version (10.1, 10.2).
 Download the relevant packages of PyTorch-Geometric according to your specific CUDA and Pytorch version from https://data.pyg.org/whl/, take CUDA = 10.2 and Pytorch = 1.6.0 as example, download the following packages from https://data.pyg.org/whl/torch-1.6.0%2Bcu102.html :
+```
+torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
+torch_scatter-2.0.5-cp38-cp38-win_amd64.whl
+torch_sparse-0.6.8-cp38-cp38-win_amd64.whl
+torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
+```
+
+
+
+
 
