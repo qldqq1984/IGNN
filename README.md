@@ -126,7 +126,8 @@ Expected performance of IGNNE for the 3-cross validation in the pre-validation e
 ```    
 In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.  
 To launch the experiments for IGNN model:  
-``` python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" ```
+``` python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" 
+```
 
   
 
