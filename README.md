@@ -75,7 +75,11 @@ The main components of the source code as following:
 `./experiments/models_parameters/Train/`. Model parameters at each epoch during the training processing.  
 `./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
-## Training and evaluation of IGNN (IGNNE) model on the raw data
+## Training and evaluation of IGNN (IGNNE) model on the raw data  
+In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.
+To launch the pre-validation experiments for IGNN model within the activated virtual environment (IGNN):
+
+
 
 
 
