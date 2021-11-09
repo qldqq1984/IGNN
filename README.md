@@ -55,7 +55,7 @@ We strongly recommend installing Rstudio after installing R, which is an integra
 # Raw Data
 The raw data includes TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital (FMU) and Harbin Medical University Cancer Hospital (HMU). By default, these data are saved as xlsx format files in the `./experiments/Patients_Information/DataSets_995/` directory, where the data of patients with DFS less than 5 years are placed in `./experiments/Patients_Information/DataSets_995/class_1/` (in which, from FMU (1).xlsx to FMU (261).xlsx for FMU patients and from HMU (1).xlsx to HMU (96).xlsx for HMU patients ) while the data of patients with DFS greater than 5 years are placed in `./experiments/ Patients_Information DataSets_995/class_2/` (in which, from FMU (1)xlsx to FMU (470).xlsx for FMU patients and from HMU (1).xlsx to HMU (168).xlsx for HMU patients).
 # Source code
-The source code related to the training and evaluation of the IGNN and IGNNE models is deposited in the ./experiments directory, and the source code provides the following content and methods:  
+The source code related to the training and evaluation of the IGNN and IGNNE models is deposited in the `./experiments` directory, and the source code provides the following content and methods:  
 *	The framework to construct graph structures and generate specialized graph dataset from TACS coding, clinical and follow-up information of patients.
 *	Attention-based graph convolutional layer with optional GPU units (GNNGruConv), and the IGNN (IGNNE) prognostic model based on GNNGruConv.
 *	The methods for adaptive training and validation of IGNN (IGNNE) model on raw data or user's own data.
