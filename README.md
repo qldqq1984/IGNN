@@ -73,8 +73,9 @@ The main components of the source code as following:
 `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN (IGNNE) models with the functional modules for model adaptive training and verification.
 `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. ROC-AUC, Sensitivity, Specificity, HR, Cindex).  
 `./experiments/models_parameters/Train/`. Model parameters at each epoch during the training processing.  
-`./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.
-
+`./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
+# Experiments
+## Training and evaluation of IGNN (IGNNE) model on the raw data
 
 
 
