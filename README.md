@@ -167,7 +167,9 @@ We provide a demo to demonstrate how to conveniently train, validate and evaluat
 python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'" -t "REBULIT_GRAPH_DATA_STATE= 'True'"   
 ``` 
 Launch the program as following to evaluate the performance of the trained model:  
-```python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"```
+```
+python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
+```
 
 
 
