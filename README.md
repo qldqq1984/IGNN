@@ -17,7 +17,7 @@ Download the Anaconda3 with python 3.8 version (data science toolkit to perform 
 Create and activate a virtual environment for project using Anaconda Prompt within Anaconda3:
  
 ```conda create -n IGNN python=3.8.3  
-conda activate IGNN```
+```conda activate IGNN
 
 Install the required packages within the activated virtual environment (IGNN):
 ```
