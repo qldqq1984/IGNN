@@ -98,6 +98,19 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
 ```  
+  
+Expected performance of IGNN for the 3-cross validation in the pre-validation experiments:    
+  
+  ``` 
+>>> TrainAuc: 0.860, TrainSen: 0.851, TrainSpe: 0.764, TrainHR: 7.654, TrainC: 0.751, 
+    TestAuc: 0.862, TestSen: 0.759, TestSpe: 0.891, TestHR: 9.61, TestC: 0.797
+>>> TrainAuc: 0.866, TrainSen: 0.799, TrainSpe: 0.874, TrainHR: 8.167, TrainC: 0.761,  
+    TestAuc: 0.804, TestSen: 0.908, TestSpe: 0.611, TestHR: 8.07, TestC: 0.741
+>>> TrainAuc: 0.871, TrainSen: 0.816, TrainSpe: 0.833, TrainHR: 7.968, TrainC: 0.765, 
+    TestAuc: 0.830, TestSen: 0.805, TestSpe: 0.783, TestHR: 7.99, TestC: 0.766   
+ ``` 
+  
+
 
 
 
