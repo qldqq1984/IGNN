@@ -13,6 +13,7 @@ Download the Anaconda3 with python 3.8 version (data science toolkit to perform 
 *	Lifelines = 0.26.0,  natsort = 7.1.1,  openpyxl = 3.0.9,  bitarray = 2.3.4,  dec2bin = 1.0.4
 *	PyTorch = 1.6.0,  torchvision = 0.7.0
 *	Torch-geometric = 1.6.1,  Torch-cluster = 1.5.8,  Torch-scatter = 2.0.5,  Torch-sparse = 0.6.8,  Torch-spline-conv = 1.2.0   
+
 Create and activate a virtual environment for project using Anaconda Prompt within Anaconda3:
 ```
 conda create -n IGNN python=3.8.3  
