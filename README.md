@@ -113,7 +113,7 @@ The predictions of the well-trained IGNNE model will be also saved as:
 ``` 
 pre_train_cohort_fold1_IGNNE.xlsx ;  pre_test_cohort_fold1_IGNNE.xlsx
 pre_train_cohort_fold2_IGNNE.xlsx ;  pre_test_cohort_fold2_IGNNE.xlsx
-pre_train_cohort_fold3_IGNNE.xlsx ;   pre_test_cohort_fold3_IGNNE.xlsx
+pre_train_cohort_fold3_IGNNE.xlsx ;  pre_test_cohort_fold3_IGNNE.xlsx
 ```   
 To reproduce the experimental results of pre-validation for IGNN model:  
 ```   
