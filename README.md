@@ -164,9 +164,10 @@ python main.py -h
 ## Training and evaluation of IGNN (IGNNE) model on the user-defined data  
 We provide a demo to demonstrate how to conveniently train, validate and evaluate the IGNN (IGNNE) model on the user's own data. First, the TACS coding, clinical and follow-up information from the patients should be recorded in xlsx files and placed in the`. /experiments/Patients_Information /DataSets_demo/` directory as we did previously for the FMU dataset and the HMU dataset, then the configuration file `./experiments/configs/user_config.toml` should be modified to set the experimental and model parameters, and finally launch the main as following:   
 ```
-python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'" -t "REBULIT_GRAPH_DATA_STATE= 'True'" 
+python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'" -t "REBULIT_GRAPH_DATA_STATE= 'True'"   
 ``` 
-
+Launch the program as following to evaluate the performance of the trained model:  
+```python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"```
 
 
 
