@@ -156,7 +156,7 @@ Then launch the procedure as follow:
 ``` 
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
 ```  
-The predictions of the well-trained IGNN model on the training and test data will be saved in the`./experiments/ experiment_results/` directory:
+The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/ experiment_results/` directory:
 ``` 
 external_train_cohort_IGNN.xlsx ;  external_test_cohort_IGNN.xlsx
 ```  
@@ -192,11 +192,11 @@ Expected performance of IGNNE in the external validation experiments:
 >>> TrainAuc: 0.913, TrainSen: 0.828, TrainSpe: 0.881, TrainHR: 14.040, TrainC: 0.848, 
     TestAuc: 0.877, TestSen: 0.750, TestSpe: 0.893, TestHR: 8.40, TestC: 0.795    
 ```    
-For more detailed about the configuration of models and experiments, please refer to the`./experiments/configs/configs.py` and `./experiments/configs/*.toml` or launch the procedure as following:  
+For more detailed about the configuration of models and experiments, please refer to the `./experiments/configs/configs.py` and `./experiments/configs/*.toml` or launch the procedure as following:  
 ``` 
 python main.py -h
 ``` 
-***Note:*** The training and validation of IGNN (IGNNE) model can be executed with windows or linux OS on both CPU and GPU. In this paper, IGNN and IGNNE were implemented by default with windows OS on CPU in all experiments to ensure reproducibility of the experimental results on the raw data as presented in the paper. The experiments are executed on CPU by default, and if the program needs to be executed on GPU, please set `-t "PROCESSUNIT_STATE='GPU'"`. Due to the variability of different operating systems and hardware platforms, the model output and performance of IGNN and IGNNE models trained and validated from scratch on different devices may have variability. Please load the models with the parameters of well-trained models in the default configuration to reproduce the experimental results of this paper as described before.   
+***Note:*** The training and validation of IGNN (IGNNE) model can be executed with windows or linux OS on both CPU and GPU. In this paper, IGNN and IGNNE were implemented by default with windows OS on CPU in all experiments to ensure reproducibility of the experimental results on the raw data as presented in the paper. The experiments are executed on CPU by default, and if the program needs to be executed on GPU, please set `-t "PROCESSUNIT_STATE='GPU'"` . Due to the variability of different operating systems and hardware platforms, the model output and performance of IGNN and IGNNE models trained and validated from scratch on different devices may have variability. Please load the models with the parameters of well-trained models in the default configuration to reproduce the experimental results of this paper as described before.   
 ## Training and evaluation of IGNN (IGNNE) model on the user-defined data  
 We provide a demo to demonstrate how to conveniently train, validate and evaluate the IGNN (IGNNE) model on the user's own data. First, the TACS coding, clinical and follow-up information from the patients should be recorded in xlsx files and placed in the `./experiments/Patients_Information /DataSets_demo/` directory as we did previously for the FMU dataset and the HMU dataset, then the configuration file `./experiments/configs/user_config.toml` should be modified to set the experimental and model parameters, and finally launch the main as following as example:   
 ```
@@ -206,7 +206,7 @@ Then Launch the program as following to evaluate the performance of the trained 
 ```
 python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```
-The predictions of the well-trained model on the training and test data will be saved in the`./experiments/ experiment_results/`directory:  
+The predictions of the well-trained model on the training and test data will be saved in the `./experiments/ experiment_results/` directory:  
 ```
 user_train_cohort_IGNNE.xlsx ;  user_test_cohort_IGNNE.xlsx
 ```  
@@ -215,9 +215,9 @@ For more detailed, please refer to the `./experiments/configs/user_configs.py` a
 python main_user.py -h
 ```
 # Source Data  
-To maximize the reproducibility of our study, we provided the raw data underlying all the figures and tables demonstrated in our paper. These raw data were saved for each figure/table in specific Excel file with multiple labeled sheets, respectively. The Excel files were deposited in the`./Source Data/` directory.  
+To maximize the reproducibility of our study, we provided the raw data underlying all the figures and tables demonstrated in our paper. These raw data were saved for each figure/table in specific Excel file with multiple labeled sheets, respectively. The Excel files were deposited in the `./Source Data/` directory.  
 # Data analysis  
-In addition, the analytical procedures with R code for Source Data were also provided to reproduce the experimental results and displayable items. These procedures were deposited in the specific folders for each figure/table under the`./Source_Data_analysis/`directory.  
+In addition, the analytical procedures with R code for Source Data were also provided to reproduce the experimental results and displayable items. These procedures were deposited in the specific folders for each figure/table under the `./Source_Data_analysis/` directory.  
 
 ***Note:*** Please ensure that the `Source Data` directory and `Source_Data_analysis` directory are in the same parent folder. Meanwhile, we recommend implementing these analytical programs in Rstudio to avoid manually setting the relative working directory. Analysis programs based on R code usually depends on some specific R packages for specialized functions. So when these programs are run for the first time, they will automatically download and install the dependent R packages. If the installation fails, please check the network connection status and the availability of the data sources for these R packages, and manually downloading and installing some R packages is also optional.
 
