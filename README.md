@@ -170,7 +170,10 @@ Launch the program as following to evaluate the performance of the trained model
 ```
 python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```
-
+For more detailed, please refer to the`./experiments/configs/user_configs.py` and `./experiments/configs/user_config.toml` or launch the procedure as following:
+```
+python main_user.py -h
+```
 
 
 
