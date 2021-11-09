@@ -147,6 +147,12 @@ Expected performance of IGNN in the external validation experiments:
     TestAuc: 0.826, TestSen: 0.750, TestSpe: 0.833, TestHR: 6.21, TestC: 0.743
 ```  
 
+To reproduce the experimental results of external validation for IGNNE model:  
+```  
+python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"  
+```  
+
+
 
 
 
