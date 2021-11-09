@@ -118,11 +118,11 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGN
 Expected performance of IGNNE for the 3-cross validation in the pre-validation experiments:  
 ```   
 >>> TrainAuc: 0.895, TrainSen: 0.862, TrainSpe: 0.828, TrainHR: 10.267, TrainC: 0.792, 
- TestAuc: 0.900, TestSen: 0.816, TestSpe: 0.878, TestHR: 14.44, TestC: 0.826
+    TestAuc: 0.900, TestSen: 0.816, TestSpe: 0.878, TestHR: 14.44, TestC: 0.826
 >>> TrainAuc: 0.914, TrainSen: 0.828, TrainSpe: 0.891, TrainHR: 10.791, TrainC: 0.805,  
-TestAuc: 0.848, TestSen: 0.874, TestSpe: 0.713, TestHR: 8.00, TestC: 0.781 
+    TestAuc: 0.848, TestSen: 0.874, TestSpe: 0.713, TestHR: 8.00, TestC: 0.781 
 >>> TrainAuc: 0.917, TrainSen: 0.845, TrainSpe: 0.868, TrainHR: 10.987, TrainC: 0.817, 
- TestAuc: 0.870, TestSen: 0.828, TestSpe: 0.796, TestHR: 9.67, TestC: 0.807
+    TestAuc: 0.870, TestSen: 0.828, TestSpe: 0.796, TestHR: 9.67, TestC: 0.807
 ```  
 
   
