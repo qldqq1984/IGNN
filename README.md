@@ -19,3 +19,12 @@ Create and activate a virtual environment for project using Anaconda Prompt with
 conda create -n IGNN python=3.8.3  
 conda activate IGNN
 ```
+Install the required packages within the activated virtual environment (IGNN):
+```
+pip install lifelines
+pip install natsort
+pip install openpyxl
+pip install bitarray
+pip install dec2bin
+
+```
