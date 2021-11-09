@@ -48,7 +48,7 @@ pip install./ torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
 pip install./ torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
 ```
 *	R software >= 3.6.0
-*	RStudio >=1.4.0  
+*	RStudio >=1.4.0
 R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS. Download and install the R software (verson 3.6.0) for windows OS from https://cloud.r-project.org/bin/windows/base/old/3.6.0/R-3.6.0-win.exe.    
 
 We strongly recommend installing Rstudio after installing R, which is an integrated development environment (IDE) for R, including console, workspace management and tools for drawing and debugging, and is convenient for users to direct execution and debug R code. Download and install the free Rstudio Desktop (verson 2021.09.0-351) for windows OS from https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe. Run Rstudio and click "Tools" -> "Global Options" -> "General" -> "Change" (Basic panel) in turn to select a specific version of R software (verson 3.6.0).  
