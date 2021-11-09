@@ -95,7 +95,7 @@ The predictions of the well-trained IGNN model on the training and test data for
 ```   
 pre_train_cohort_fold1_IGNN.xlsx ;  pre_test_cohort_fold1_IGNN.xlsx
 pre_train_cohort_fold2_IGNN.xlsx ;  pre_test_cohort_fold2_IGNN.xlsx
-pre_train_cohort_fold3_IGNN.xlsx ;   pre_test_cohort_fold3_IGNN.xlsx
+pre_train_cohort_fold3_IGNN.xlsx ;  pre_test_cohort_fold3_IGNN.xlsx
 ``` 
 To launch the pre-validation experiments for IGNNE model:
 ```
