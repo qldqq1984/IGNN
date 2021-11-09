@@ -124,13 +124,22 @@ Expected performance of IGNNE for the 3-cross validation in the pre-validation e
 >>> TrainAuc: 0.917, TrainSen: 0.845, TrainSpe: 0.868, TrainHR: 10.987, TrainC: 0.817, 
     TestAuc: 0.870, TestSen: 0.828, TestSpe: 0.796, TestHR: 9.67, TestC: 0.807
 ```    
-In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.  
+In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.   
+
 To launch the experiments for IGNN model:  
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" 
-```
+```  
 
-  
+To launch the experiments for IGNNE model:
+```
+python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
+```   
+
+To reproduce the experimental results of external validation for IGNN model:
+```
+python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
+```   
 
 
 
