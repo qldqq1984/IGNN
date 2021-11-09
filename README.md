@@ -91,7 +91,7 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
 
 ```      
-The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/ experiment_results/` directory:
+The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
 ```   
 pre_train_cohort_fold1_IGNN.xlsx ;  pre_test_cohort_fold1_IGNN.xlsx
 pre_train_cohort_fold2_IGNN.xlsx ;  pre_test_cohort_fold2_IGNN.xlsx
@@ -156,7 +156,7 @@ Then launch the procedure as follow:
 ``` 
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
 ```  
-The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/ experiment_results/` directory:
+The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/experiment_results/` directory:
 ``` 
 external_train_cohort_IGNN.xlsx ;  external_test_cohort_IGNN.xlsx
 ```  
@@ -206,7 +206,7 @@ Then Launch the program as following to evaluate the performance of the trained 
 ```
 python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```
-The predictions of the well-trained model on the training and test data will be saved in the `./experiments/ experiment_results/` directory:  
+The predictions of the well-trained model on the training and test data will be saved in the `./experiments/experiment_results/` directory:  
 ```
 user_train_cohort_IGNNE.xlsx ;  user_test_cohort_IGNNE.xlsx
 ```  
