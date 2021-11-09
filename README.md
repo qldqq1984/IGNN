@@ -76,13 +76,28 @@ The main components of the source code as following:
 `./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
 ## Training and evaluation of IGNN (IGNNE) model on the raw data  
-In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.  
+In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
+
 To launch the pre-validation experiments for IGNN model within the activated virtual environment (IGNN):    
 ```  
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
-``` 
+```   
+
+To launch the pre-validation experiments for IGNNE model:  
+```   
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'" 
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
+```   
+
+To reproduce the experimental results of pre-validation for IGNN model:  
+```   
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'" 
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
+```  
 
 
 
