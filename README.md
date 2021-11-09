@@ -150,7 +150,13 @@ Expected performance of IGNN in the external validation experiments:
 To reproduce the experimental results of external validation for IGNNE model:  
 ```  
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"  
+```    
+Expected performance of IGNNE in the external validation experiments:  
 ```  
+>>> TrainAuc: 0.913, TrainSen: 0.828, TrainSpe: 0.881, TrainHR: 14.040, TrainC: 0.848, 
+    TestAuc: 0.877, TestSen: 0.750, TestSpe: 0.893, TestHR: 8.40, TestC: 0.795    
+```  
+
 
 
 
