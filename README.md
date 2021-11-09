@@ -61,8 +61,9 @@ The source code related to the training and evaluation of the IGNN and IGNNE mod
 *	The framework to construct graph structures and generate specialized graph dataset from TACS coding, clinical and follow-up information of patients.
 *	Attention-based graph convolutional layer with optional GPU units (GNNGruConv), and the IGNN (IGNNE) prognostic model based on GNNGruConv.
 *	The methods for adaptive training and validation of IGNN (IGNNE) model on raw data or user's own data.
-*	Reproduction of experimental results and data analysis demonstrated in the paper.
-The main components of the source code as following:    
+*	Reproduction of experimental results and data analysis demonstrated in the paper.    
+The main components of the source code as following:  
+`main.py`. Procedures for training, evaluation and reproducibility of IGNN (IGNNE) model on raw data in the pre-validation or external validation experiments shown in paper.
 
 
 
