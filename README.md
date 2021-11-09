@@ -7,3 +7,5 @@ IGNN (IGNNE) is a graph neural network-based interpretable machine learning mode
 * CUDA >= 10.1.105 
 * CUDNN >=7.6.0  
 Download the NVIDIA CUDA Toolkit from https://developer.nvidia.com/cuda-toolkit-archive and install CUDA for windows OS with the installation Guide https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installcuda-windows, then download and install the NVIDIA cuDNN corresponding to CUDA from https://developer.nvidia.com/rdp/cudnn-archive#a-collapse742-10 with the installation Guide https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installwindows.
+* Anaconda3  
+Download the Anaconda3 with python 3.8 version (data science toolkit to perform Python/R data science and machine learnin) from https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe and install it for windows OS with the installation Guide https://docs.continuum.io/anaconda/install/windows/
