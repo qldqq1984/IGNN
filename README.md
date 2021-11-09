@@ -108,7 +108,13 @@ Expected performance of IGNN for the 3-cross validation in the pre-validation ex
       TestAuc: 0.804, TestSen: 0.908, TestSpe: 0.611, TestHR: 8.07, TestC: 0.741
 >>> TrainAuc: 0.871, TrainSen: 0.816, TrainSpe: 0.833, TrainHR: 7.968, TrainC: 0.765, 
       TestAuc: 0.830, TestSen: 0.805, TestSpe: 0.783, TestHR: 7.99, TestC: 0.766   
- ``` 
+ ```   
+ To reproduce the experimental results of pre-validation for IGNNE model:  
+```    
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'" 
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"
+python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"
+```
   
 
 
