@@ -16,7 +16,7 @@ Download the Anaconda3 with python 3.8 version (data science toolkit to perform 
 *	Torch-cluster = 1.5.8,  Torch-scatter = 2.0.5,  Torch-sparse = 0.6.8,  Torch-spline-conv = 1.2.0   
 
 Create and activate a virtual environment for project using Anaconda Prompt within Anaconda3:
- ```
+ ```bash
 conda create -n IGNN python=3.8.3  
 conda activate IGNN
 ```
