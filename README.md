@@ -212,12 +212,16 @@ To reproduce the experimental results of external validation for IGNN model:
 ```bash
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'"
 ```   
-
+ 
 Expected performance of IGNN in the external validation experiments:  
 ```  
 >>> TrainAuc: 0.869, TrainSen: 0.782, TrainSpe: 0.857, TrainHR: 9.585, TrainC: 0.798, 
     TestAuc: 0.826, TestSen: 0.750, TestSpe: 0.833, TestHR: 6.21, TestC: 0.743
 ```  
+The predictions of the reproduced IGNN model will be also saved as:
+```
+external_train_cohort_IGNN.xlsx;  external_test_cohort_IGNN.xlsx
+``` 
 
 To reproduce the experimental results of external validation for IGNNE model:  
 ```bash  
@@ -227,7 +231,12 @@ Expected performance of IGNNE in the external validation experiments:
 ```  
 >>> TrainAuc: 0.913, TrainSen: 0.828, TrainSpe: 0.881, TrainHR: 14.040, TrainC: 0.848, 
     TestAuc: 0.877, TestSen: 0.750, TestSpe: 0.893, TestHR: 8.40, TestC: 0.795    
-```    
+```   
+The predictions of the reproduced IGNNE model will be also saved as:
+```
+external_train_cohort_IGNNE.xlsx;  external_test_cohort_IGNNE.xlsx
+``` 
+
 For more detailed about the configuration of models and experiments, please refer to the `./experiments/configs/configs.py` and `./experiments/configs/*.toml` or launch the procedure as following:  
 ```bash 
 python main.py -h
