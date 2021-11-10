@@ -234,6 +234,9 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
+# need to split training samples to two independent datasets for training and validating
+# please use deepsignal_plant train -h/--help for instructions
+deepsignal_plant train --train_file /path/to/train/file --valid_file /path/to/valid/file --model_dir /dir/to/save/the/new/model
 
 
 
