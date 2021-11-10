@@ -93,9 +93,9 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGN
 ```      
 The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
 ```   
-pre_train_cohort_fold1_IGNN.xlsx ;  pre_test_cohort_fold1_IGNN.xlsx
-pre_train_cohort_fold2_IGNN.xlsx ;  pre_test_cohort_fold2_IGNN.xlsx
-pre_train_cohort_fold3_IGNN.xlsx ;  pre_test_cohort_fold3_IGNN.xlsx
+pre_train_cohort_fold1_IGNN.xlsx;  pre_test_cohort_fold1_IGNN.xlsx
+pre_train_cohort_fold2_IGNN.xlsx;  pre_test_cohort_fold2_IGNN.xlsx
+pre_train_cohort_fold3_IGNN.xlsx;  pre_test_cohort_fold3_IGNN.xlsx
 ``` 
 To launch the pre-validation experiments for IGNNE model:
 ```
@@ -103,7 +103,7 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 ```  
-Then launch the procedure as follow:  
+Then launch the procedure as following:  
 ```
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'E"  -t "MODEL_STATE='Result'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Result'"
@@ -111,9 +111,9 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGN
 ```  
 The predictions of the well-trained IGNNE model will be also saved as:  
 ``` 
-pre_train_cohort_fold1_IGNNE.xlsx ;  pre_test_cohort_fold1_IGNNE.xlsx
-pre_train_cohort_fold2_IGNNE.xlsx ;  pre_test_cohort_fold2_IGNNE.xlsx
-pre_train_cohort_fold3_IGNNE.xlsx ;  pre_test_cohort_fold3_IGNNE.xlsx
+pre_train_cohort_fold1_IGNNE.xlsx;  pre_test_cohort_fold1_IGNNE.xlsx
+pre_train_cohort_fold2_IGNNE.xlsx;  pre_test_cohort_fold2_IGNNE.xlsx
+pre_train_cohort_fold3_IGNNE.xlsx;  pre_test_cohort_fold3_IGNNE.xlsx
 ```   
 To reproduce the experimental results of pre-validation for IGNN model:  
 ```   
@@ -152,13 +152,13 @@ To launch the experiments for IGNN model:
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"   
 ```     
-Then launch the procedure as follow:
+Then launch the procedure as following:
 ``` 
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
 ```  
 The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/experiment_results/` directory:
 ``` 
-external_train_cohort_IGNN.xlsx ;  external_test_cohort_IGNN.xlsx
+external_train_cohort_IGNN.xlsx;  external_test_cohort_IGNN.xlsx
 ```  
 To launch the experiments for IGNNE model:
 ```
