@@ -131,7 +131,7 @@ python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'E
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```  
-The predictions of the well-trained IGNNE model will be also saved as:  
+The predictions of the well-trained IGNNE model will be saved as:  
 ```
 pre_train_cohort_fold1_IGNNE.xlsx;  pre_test_cohort_fold1_IGNNE.xlsx
 pre_train_cohort_fold2_IGNNE.xlsx;  pre_test_cohort_fold2_IGNNE.xlsx
@@ -153,6 +153,13 @@ Expected performance of IGNN for the 3-cross validation in the pre-validation ex
 >>> TrainAuc: 0.871, TrainSen: 0.816, TrainSpe: 0.833, TrainHR: 7.968, TrainC: 0.765, 
     TestAuc: 0.830, TestSen: 0.805, TestSpe: 0.783, TestHR: 7.99, TestC: 0.766   
 ```    
+The predictions of the reproduced IGNN model will be saved as:  
+```
+pre_train_cohort_fold1_IGNN.xlsx;  pre_test_cohort_fold1_IGNN.xlsx
+pre_train_cohort_fold2_IGNN.xlsx;  pre_test_cohort_fold2_IGNN.xlsx
+pre_train_cohort_fold3_IGNN.xlsx;  pre_test_cohort_fold3_IGNN.xlsx
+```   
+
  To reproduce the experimental results of pre-validation for IGNNE model:  
 ```bash    
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'" 
@@ -167,7 +174,13 @@ Expected performance of IGNNE for the 3-cross validation in the pre-validation e
     TestAuc: 0.848, TestSen: 0.874, TestSpe: 0.713, TestHR: 8.00, TestC: 0.781 
 >>> TrainAuc: 0.917, TrainSen: 0.845, TrainSpe: 0.868, TrainHR: 10.987, TrainC: 0.817, 
     TestAuc: 0.870, TestSen: 0.828, TestSpe: 0.796, TestHR: 9.67, TestC: 0.807
-```    
+``` 
+The predictions of the reproduced IGNNE model will be saved as:  
+```
+pre_train_cohort_fold1_IGNNE.xlsx;  pre_test_cohort_fold1_IGNNE.xlsx
+pre_train_cohort_fold2_IGNNE.xlsx;  pre_test_cohort_fold2_IGNNE.xlsx
+pre_train_cohort_fold3_IGNNE.xlsx;  pre_test_cohort_fold3_IGNNE.xlsx
+```   
 #### 2. External-validation <br>
 In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.   
 
