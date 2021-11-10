@@ -133,9 +133,9 @@ Expected performance of IGNN for the 3-cross validation in the pre-validation ex
  ```    
  To reproduce the experimental results of pre-validation for IGNNE model:  
 ```    
-python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'" 
-python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"
-python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"
+python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'" 
+python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
+python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
 ```  
 Expected performance of IGNNE for the 3-cross validation in the pre-validation experiments:  
 ```   
@@ -150,11 +150,11 @@ In the external validation experiments, the model will be trained on the FMU dat
 
 To launch the experiments for IGNN model:  
 ```
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"   
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'"   
 ```     
 Then launch the procedure as following:
 ``` 
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 ```  
 The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/experiment_results/` directory:
 ``` 
@@ -162,11 +162,11 @@ external_train_cohort_IGNN.xlsx;  external_test_cohort_IGNN.xlsx
 ```  
 To launch the experiments for IGNNE model:
 ```
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'"
 ```    
 Then launch the procedure as following:  
 ```
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Result'"  
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"  
 ```
 The predictions of the well-trained IGNNE model on the training and test data will be also saved as:
 ```
@@ -174,7 +174,7 @@ external_train_cohort_IGNNE.xlsx;  external_test_cohort_IGNNE.xlsx
 ```  
 To reproduce the experimental results of external validation for IGNN model:
 ```
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Reproduce'"
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'"
 ```   
 
 Expected performance of IGNN in the external validation experiments:  
@@ -185,7 +185,7 @@ Expected performance of IGNN in the external validation experiments:
 
 To reproduce the experimental results of external validation for IGNNE model:  
 ```  
-python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Reproduce'"  
+python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"  
 ```    
 Expected performance of IGNNE in the external validation experiments:  
 ```  
@@ -211,7 +211,7 @@ python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODE
 ```
 The predictions of the well-trained model on the training and test data will be saved in the `./experiments/experiment_results/` directory:  
 ```
-user_train_cohort_IGNNE.xlsx ;  user_test_cohort_IGNNE.xlsx
+user_train_cohort_IGNNE.xlsx;  user_test_cohort_IGNNE.xlsx
 ```  
 For more detailed, please refer to the `./experiments/configs/user_configs.py` and `./experiments/configs/user_config.toml` or launch the procedure as following:
 ```
