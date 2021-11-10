@@ -200,7 +200,7 @@ python main.py -h
 `-t "PROCESSUNIT_STATE='GPU'"`.   
 Due to the variability of different operating systems and hardware platforms, the model output and performance of IGNN and IGNNE models trained and validated from scratch on different devices may have variability. Please load the models with the parameters of well-trained models in the default configuration to reproduce the experimental results of this paper as described before.
  
-## Training and evaluation of IGNN (IGNNE) model on the user-defined data  
+## Training and evaluation of IGNN(IGNNE) model on the user-defined data  
 We provide a demo to demonstrate how to conveniently train, validate and evaluate the IGNN (IGNNE) model on the user's own data. First, the TACS coding, clinical and follow-up information from the patients should be recorded in xlsx files and placed in the `./experiments/Patients_Information/DataSets_demo/` directory as we did previously for the FMU dataset and the HMU dataset, then the configuration file `./experiments/configs/user_config.toml` should be modified to set the experimental and model parameters, and finally launch the main as following:   
 ```
 python main_user.py -t "EXPERIMENT_TYPE='user'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'" -t "REBULIT_GRAPH_DATA_STATE= 'True'"   
@@ -225,6 +225,13 @@ In addition, the analytical procedures with R code for Source Data were also pro
 ***Note:*** Please ensure that the `Source Data` directory and `Source_Data_analysis` directory are in the same parent folder. Meanwhile, we recommend implementing these analytical programs in Rstudio to avoid manually setting the relative working directory. Analysis programs based on R code usually depends on some specific R packages for specialized functions. So when these programs are run for the first time, they will automatically download and install the dependent R packages. If the installation fails, please check the network connection status and the availability of the data sources for these R packages, and manually downloading and installing some R packages is also optional.
 # License
 GPL v3.0
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
 
 
