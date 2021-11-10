@@ -77,7 +77,7 @@ The main components of the source code as following:
 ## Training and evaluation of IGNN (IGNNE) model on the raw data  
 In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
 
-To launch the pre-validation experiments for IGNN model within the activated virtual environment (IGNN):    
+To launch the pre-validation experiments for IGNN model within the activated virtual environment(IGNN):    
 ```  
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
@@ -164,13 +164,13 @@ To launch the experiments for IGNNE model:
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 ```    
-Then launch the procedure as follow:  
+Then launch the procedure as following:  
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Result'"  
 ```
 The predictions of the well-trained IGNNE model on the training and test data will be also saved as:
 ```
-external_train_cohort_IGNNE.xlsx ;  external_test_cohort_IGNNE.xlsx
+external_train_cohort_IGNNE.xlsx;  external_test_cohort_IGNNE.xlsx
 ```  
 To reproduce the experimental results of external validation for IGNN model:
 ```
