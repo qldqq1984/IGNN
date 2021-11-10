@@ -217,7 +217,6 @@ user_train_cohort_IGNNE.xlsx;  user_test_cohort_IGNNE.xlsx
 ```  
 For more detailed, please refer to the `./experiments/configs/user_configs.py` and `./experiments/configs/user_config.toml` or launch the procedure as following:
 ```
-# please use deepsignal_plant train -h/--help for instructions
 python main_user.py -h
 ```
 # Source Data  
