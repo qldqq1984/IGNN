@@ -48,9 +48,9 @@ pip install ./torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
 pip install ./torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
 ```
 *	R software >= 3.6.0
-*	RStudio >=1.4.0     
+*	RStudio >= 1.4.0     
 
-R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS. Download and install the R software (verson 3.6.0) for windows OS from https://cloud.r-project.org/bin/windows/base/old/3.6.0/R-3.6.0-win.exe.    
+R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of linux platforms, windows and MacOS. Download and install the R software (verson 3.6.0) for windows OS from https://cloud.r-project.org/bin/windows/base/old/3.6.0/R-3.6.0-win.exe.    
 
 We strongly recommend installing Rstudio after installing R, which is an integrated development environment (IDE) for R, including console, workspace management and tools for drawing and debugging, and is convenient for users to direct execution and debug R code. Download and install the free Rstudio Desktop (verson 2021.09.0-351) for windows OS from https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe. Run Rstudio and click "Tools" -> "Global Options" -> "General" -> "Change" (Basic panel) in turn to select a specific version of R software (verson 3.6.0).  
 # Raw Data
@@ -66,13 +66,13 @@ The source code related to the training and evaluation of the IGNN and IGNNE mod
 
 The main components of the source code as following:  
   * `main.py`. Procedures for training, evaluation and reproducibility of IGNN (IGNNE) model on raw data in the pre-validation or external validation experiments shown in paper.  
-  *  `main_user.py`. Template program for the IGNN (IGNNE) model to be trained and verified on the user-defined data.    
-  *  `./experiments/Patients_Informatio/DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital (FMU) and Harbin Medical University Cancer Hospital (HMU).  
+  *  `main_user.py`. Template program for the IGNN(IGNNE) model to be trained and verified on the user-defined data.    
+  *  `./experiments/Patients_Informatio/DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU).  
   *  `./experiments/Patients_Information/DataSets_demo/`. The user-defined data of patients.
   *  `./experiments/graphdataset_utils/`. The directory includes main functional modules for constructing graph structures and generating graphdataset.  
   *  `./experiments/Graphdatasets/`. This directory saves the specific graphdatasets generated from the raw data (TACS_G) and the user-defined data (User_G).  
-  *  `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN (IGNNE) models with the functional modules for model adaptive training and verification.
-  *  `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. ROC-AUC, Sensitivity, Specificity, HR, Cindex).  
+  *  `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN(IGNNE) models with the functional modules for model adaptive training.
+  *  `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. AUC, Sensitivity, Specificity, HR, Cindex).  
   *  `./experiments/models_parameters/Train/`. Model parameters at each epoch during the training processing.  
   *  `./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
@@ -86,7 +86,7 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
 ```   
 
-Then launch the procedure as follow: 
+Then launch the procedure as following: 
 ```   
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Result'"
@@ -95,9 +95,9 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGN
 ```      
 The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
 ```   
-pre_train_cohort_fold1_IGNN.xlsx ;  pre_test_cohort_fold1_IGNN.xlsx
-pre_train_cohort_fold2_IGNN.xlsx ;  pre_test_cohort_fold2_IGNN.xlsx
-pre_train_cohort_fold3_IGNN.xlsx ;  pre_test_cohort_fold3_IGNN.xlsx
+pre_train_cohort_fold1_IGNN.xlsx;  pre_test_cohort_fold1_IGNN.xlsx
+pre_train_cohort_fold2_IGNN.xlsx;  pre_test_cohort_fold2_IGNN.xlsx
+pre_train_cohort_fold3_IGNN.xlsx;  pre_test_cohort_fold3_IGNN.xlsx
 ``` 
 To launch the pre-validation experiments for IGNNE model:
 ```
@@ -105,7 +105,7 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGN
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 ```  
-Then launch the procedure as follow:  
+Then launch the procedure as following:  
 ```
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'E"  -t "MODEL_STATE='Result'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Result'"
@@ -113,9 +113,9 @@ python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGN
 ```  
 The predictions of the well-trained IGNNE model will be also saved as:  
 ``` 
-pre_train_cohort_fold1_IGNNE.xlsx ;  pre_test_cohort_fold1_IGNNE.xlsx
-pre_train_cohort_fold2_IGNNE.xlsx ;  pre_test_cohort_fold2_IGNNE.xlsx
-pre_train_cohort_fold3_IGNNE.xlsx ;  pre_test_cohort_fold3_IGNNE.xlsx
+pre_train_cohort_fold1_IGNNE.xlsx;  pre_test_cohort_fold1_IGNNE.xlsx
+pre_train_cohort_fold2_IGNNE.xlsx;  pre_test_cohort_fold2_IGNNE.xlsx
+pre_train_cohort_fold3_IGNNE.xlsx;  pre_test_cohort_fold3_IGNNE.xlsx
 ```   
 To reproduce the experimental results of pre-validation for IGNN model:  
 ```   
@@ -166,7 +166,7 @@ To launch the experiments for IGNNE model:
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Train'"
 ```    
-Then launch the procedure as follow:  
+Then launch the procedure as following:  
 ```
 python main.py  -t "EXPERIMENT_TYPE='external'"  -t "MODEL_TYPE='IGNNE'"  -t "MODEL_STATE='Result'"  
 ```
