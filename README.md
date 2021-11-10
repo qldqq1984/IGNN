@@ -59,7 +59,7 @@ The raw data includes TACS coding observed from MPM imaging, clinical and follow
 The source code related to the training and evaluation of the IGNN and IGNNE models is deposited in the `./experiments` directory, and the source code provides the following content and methods:  
 *	The framework to construct graph structures and generate specialized graph dataset from TACS coding, clinical and follow-up information of patients.
 *	Attention-based graph convolutional layer with optional GPU units (GNNGruConv), and the IGNN (IGNNE) prognostic model based on GNNGruConv.
-*	The methods for adaptive training and validation of IGNN (IGNNE) model on raw data or user's own data.
+*	The methods for adaptive training and validation of IGNN (IGNNE) model on raw data or user-defined own data.
 *	Reproduction of experimental results and data analysis demonstrated in the paper.    
 
 The main components of the source code as following:  
