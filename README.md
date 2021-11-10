@@ -60,27 +60,27 @@ The raw data includes TACS coding observed from MPM imaging, clinical and follow
 The source code related to the training and evaluation of the IGNN and IGNNE models is deposited in the `./experiments` directory, and the source code provides the following content and methods:  
 *	The framework to construct graph structures and generate specialized graph dataset from TACS coding, clinical and follow-up information of patients.
 *	Attention-based graph convolutional layer with optional GPU units (GNNGruConv), and the IGNN (IGNNE) prognostic model based on GNNGruConv.
-*	The methods for adaptive training and validation of IGNN (IGNNE) model on raw data or user-defined own data.
+*	The methods for adaptive training and validation of IGNN(IGNNE) model on raw data or user-defined own data.
 *	Reproduction of experimental results and data analysis demonstrated in the paper.    
 
 The main components of the source code as following:  
-  * `main.py`. Procedures for training, evaluation and reproducibility of IGNN (IGNNE) model on raw data in the pre-validation or external validation experiments shown in paper.  
-  *  `main_user.py`. Template program for the IGNN (IGNNE) model to be trained and verified on the user-defined data.    
-  *  `./experiments/Patients_Informatio/DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital (FMU) and Harbin Medical University Cancer Hospital (HMU).  
+  * `main.py`. Procedures for training, evaluation and reproducibility of IGNN(IGNNE) model on raw data in the pre-validation or external validation experiments.  
+  *  `main_user.py`. Template program for the IGNN(IGNNE) model to be trained and verified on the user-defined data.    
+  *  `./experiments/Patients_Informatio/DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU).  
   *  `./experiments/Patients_Information/DataSets_demo/`. The user-defined data of patients.
   *  `./experiments/graphdataset_utils/`. The directory includes main functional modules for constructing graph structures and generating graphdataset.  
   *  `./experiments/Graphdatasets/`. This directory saves the specific graphdatasets generated from the raw data (TACS_G) and the user-defined data (User_G).  
-  *  `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN (IGNNE) models with the functional modules for model adaptive training and verification.
-  *  `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. ROC-AUC, Sensitivity, Specificity, HR, Cindex).  
+  *  `./experiments/models/`. The directory includes the architecture of GNNGruConv and IGNN(IGNNE) models with the functional modules for model adaptive training.
+  *  `./experiments/experiment_utils/`. The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. AUC, Sensitivity, Specificity, HR, Cindex).  
   *  `./experiments/models_parameters/Train/`. Model parameters at each epoch during the training processing.  
   *  `./experiments/models_parameters/Reproduce/`. All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
-## Training and evaluation of IGNN (IGNNE) model on the raw data  
+## Training and evaluation of IGNN(IGNNE) model on the raw data  
 In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
 
 To launch the pre-validation experiments for IGNN model within the activated virtual environment(IGNN):    
 ```  
-python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='1'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'" 
+python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'" 
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='2'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
 python main.py  -t "EXPERIMENT_TYPE='pre'"  -t "FOLD_N='3'"  -t "MODEL_TYPE='IGNN'"  -t "MODEL_STATE='Train'"
 ```   
