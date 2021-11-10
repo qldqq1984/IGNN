@@ -67,7 +67,7 @@ The source code related to the training and evaluation of the IGNN and IGNNE mod
 
 The main components of the source code as following:  
   * `main.py`. 
-     Procedures for training, evaluation and reproducibility of IGNN(IGNNE) model on raw data in the pre-validation or external validation experiments.  
+    Procedures for training, evaluation and reproducibility of IGNN(IGNNE) model on raw data in the pre-validation or external validation experiments.  
   *  `main_user.py`. Template program for the IGNN(IGNNE) model to be trained and verified on the user-defined data.    
   *  `./experiments/Patients_Informatio/DataSets_995/`. The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU).  
   *  `./experiments/Patients_Information/DataSets_demo/`. The user-defined data of patients.
