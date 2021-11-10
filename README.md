@@ -26,6 +26,7 @@ pip install natsort
 pip install openpyxl
 pip install bitarray
 pip install dec2bin
+pip indtsll toml
 ```
 Install the Pytorch and PyTorch-Geometric (A library built upon PyTorch to develop Graph Neural Networks https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#quick-start) within the activated virtual environment (IGNN):
 ```  
