@@ -97,7 +97,7 @@ The main components of the source code as following:
     All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
 ## Training and evaluation of IGNN(IGNNE) model on the raw data  
-#### 1. Pre-validation
+#### 1. Pre-validation <br>
 In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
 
 To launch the pre-validation experiments for IGNN model within the activated virtual environment(IGNN):    
@@ -168,8 +168,7 @@ Expected performance of IGNNE for the 3-cross validation in the pre-validation e
 >>> TrainAuc: 0.917, TrainSen: 0.845, TrainSpe: 0.868, TrainHR: 10.987, TrainC: 0.817, 
     TestAuc: 0.870, TestSen: 0.828, TestSpe: 0.796, TestHR: 9.67, TestC: 0.807
 ```    
-
-#### 2. External-validation
+#### 2. External-validation <br>
 In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.   
 
 To launch the experiments for IGNN model:  
