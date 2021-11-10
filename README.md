@@ -21,7 +21,7 @@ conda create -n IGNN python=3.8.3
 conda activate IGNN
 ```
 Install the required packages within the activated virtual environment (IGNN):
-```
+```bash
 pip install lifelines
 pip install natsort
 pip install openpyxl
@@ -30,20 +30,20 @@ pip install dec2bin
 pip indtsll toml
 ```
 Install the Pytorch and PyTorch-Geometric (A library built upon PyTorch to develop Graph Neural Networks https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#quick-start) within the activated virtual environment (IGNN):
-```  
+```bash 
 conda install pytorch==1.6.0 torchvision==0.7.0 torchaudio cudatoolkit=${CUDATOOLKIT} -c pytorch
 pip install torch-geometric==1.6.1
 ```
 Where ${CUDATOOLKIT} should be replaced by the specific CUDA version (10.1, 10.2).   
 Download the relevant packages of PyTorch-Geometric according to your specific CUDA and Pytorch version from https://data.pyg.org/whl/, take CUDA = 10.2 and Pytorch = 1.6.0 as example, download the following packages from https://data.pyg.org/whl/torch-1.6.0%2Bcu102.html :
-```
+```bash
 torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
 torch_scatter-2.0.5-cp38-cp38-win_amd64.whl
 torch_sparse-0.6.8-cp38-cp38-win_amd64.whl
 torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
 ```  
 and install them within the activated virtual environment(IGNN):  
-```  
+```bash  
 pip install ./torch_scatter-2.0.5-cp38-cp38-win_amd64.whl
 pip install ./torch_sparse-0.6.8-cp38-cp38-win_amd64.whl
 pip install ./torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
@@ -74,18 +74,25 @@ The main components of the source code as following:
 
   *  `./experiments/Patients_Informatio/DataSets_995/`. <br>
     The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU).  
+
   *  `./experiments/Patients_Information/DataSets_demo/`. <br>
     The user-defined data of patients.
+
   *  `./experiments/graphdataset_utils/`. <br>
     The directory includes main functional modules for constructing graph structures and generating graphdataset.  
+
   *  `./experiments/Graphdatasets/`. <br>
     This directory saves the specific graphdatasets generated from the raw data (TACS_G) and the user-defined data (User_G).  
+
   *  `./experiments/models/`. <br>
     The directory includes the architecture of GNNGruConv and IGNN(IGNNE) models with the functional modules for model adaptive training.
+
   *  `./experiments/experiment_utils/`. <br>
-    The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. AUC, Sensitivity, Specificity, HR, Cindex).  
+    The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. AUC, Sensitivity, Specificity, HR, Cindex). 
+
   *  `./experiments/models_parameters/Train/`. <br>
     Model parameters at each epoch during the training processing.  
+
   *  `./experiments/models_parameters/Reproduce/`. <br>
     All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
@@ -93,60 +100,60 @@ The main components of the source code as following:
 In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
 
 To launch the pre-validation experiments for IGNN model within the activated virtual environment(IGNN):    
-```  
+```bash  
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'"
 ```   
 
 Then launch the procedure as following: 
-```   
+```bash   
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 ```      
 The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
-```   
+```  
 pre_train_cohort_fold1_IGNN.xlsx;  pre_test_cohort_fold1_IGNN.xlsx
 pre_train_cohort_fold2_IGNN.xlsx;  pre_test_cohort_fold2_IGNN.xlsx
 pre_train_cohort_fold3_IGNN.xlsx;  pre_test_cohort_fold3_IGNN.xlsx
 ``` 
 To launch the pre-validation experiments for IGNNE model:
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'"
 ```  
 Then launch the procedure as following:  
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'E" -t "MODEL_STATE='Result'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```  
 The predictions of the well-trained IGNNE model will be also saved as:  
-``` 
+```
 pre_train_cohort_fold1_IGNNE.xlsx;  pre_test_cohort_fold1_IGNNE.xlsx
 pre_train_cohort_fold2_IGNNE.xlsx;  pre_test_cohort_fold2_IGNNE.xlsx
 pre_train_cohort_fold3_IGNNE.xlsx;  pre_test_cohort_fold3_IGNNE.xlsx
 ```   
 To reproduce the experimental results of pre-validation for IGNN model:  
-```   
+```bash   
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'"
 ```  
 Expected performance of IGNN for the 3-cross validation in the pre-validation experiments:    
   
-  ``` 
+``` 
 >>> TrainAuc: 0.860, TrainSen: 0.851, TrainSpe: 0.764, TrainHR: 7.654, TrainC: 0.751, 
-      TestAuc: 0.862, TestSen: 0.759, TestSpe: 0.891, TestHR: 9.61, TestC: 0.797
+       TestAuc: 0.862, TestSen: 0.759, TestSpe: 0.891, TestHR: 9.61, TestC: 0.797
 >>> TrainAuc: 0.866, TrainSen: 0.799, TrainSpe: 0.874, TrainHR: 8.167, TrainC: 0.761,  
-      TestAuc: 0.804, TestSen: 0.908, TestSpe: 0.611, TestHR: 8.07, TestC: 0.741
+       TestAuc: 0.804, TestSen: 0.908, TestSpe: 0.611, TestHR: 8.07, TestC: 0.741
 >>> TrainAuc: 0.871, TrainSen: 0.816, TrainSpe: 0.833, TrainHR: 7.968, TrainC: 0.765, 
-      TestAuc: 0.830, TestSen: 0.805, TestSpe: 0.783, TestHR: 7.99, TestC: 0.766   
- ```    
- To reproduce the experimental results of pre-validation for IGNNE model:  
+       TestAuc: 0.830, TestSen: 0.805, TestSpe: 0.783, TestHR: 7.99, TestC: 0.766   
 ```    
+ To reproduce the experimental results of pre-validation for IGNNE model:  
+```bash    
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
@@ -163,11 +170,11 @@ Expected performance of IGNNE for the 3-cross validation in the pre-validation e
 In the external validation experiments, the model will be trained on the FMU dataset and validated on the HMU dataset.   
 
 To launch the experiments for IGNN model:  
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Train'"   
 ```     
 Then launch the procedure as following:
-``` 
+```bash 
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 ```  
 The predictions of the well-trained IGNN model on the training and test data will be saved in the `./experiments/experiment_results/` directory:
@@ -175,11 +182,11 @@ The predictions of the well-trained IGNN model on the training and test data wil
 external_train_cohort_IGNN.xlsx;  external_test_cohort_IGNN.xlsx
 ```  
 To launch the experiments for IGNNE model:
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Train'"
 ```    
 Then launch the procedure as following:  
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"  
 ```
 The predictions of the well-trained IGNNE model on the training and test data will be also saved as:
@@ -187,7 +194,7 @@ The predictions of the well-trained IGNNE model on the training and test data wi
 external_train_cohort_IGNNE.xlsx;  external_test_cohort_IGNNE.xlsx
 ```  
 To reproduce the experimental results of external validation for IGNN model:
-```
+```bash
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Reproduce'"
 ```   
 
@@ -198,7 +205,7 @@ Expected performance of IGNN in the external validation experiments:
 ```  
 
 To reproduce the experimental results of external validation for IGNNE model:  
-```  
+```bash  
 python main.py -t "EXPERIMENT_TYPE='external'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"  
 ```    
 Expected performance of IGNNE in the external validation experiments:  
@@ -207,7 +214,7 @@ Expected performance of IGNNE in the external validation experiments:
     TestAuc: 0.877, TestSen: 0.750, TestSpe: 0.893, TestHR: 8.40, TestC: 0.795    
 ```    
 For more detailed about the configuration of models and experiments, please refer to the `./experiments/configs/configs.py` and `./experiments/configs/*.toml` or launch the procedure as following:  
-``` 
+```bash 
 python main.py -h
 ``` 
 ***Note:*** The training and validation of IGNN (IGNNE) model can be executed with windows or linux OS on both CPU and GPU. In this paper, IGNN and IGNNE were implemented by default with windows OS on CPU in all experiments to ensure reproducibility of the experimental results on the raw data as presented in the paper. The experiments are executed on CPU by default, and if the program needs to be executed on GPU, please set  
