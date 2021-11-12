@@ -111,7 +111,7 @@ The main components of the source code as following:
     Model parameters at each epoch during the training processing.  
 
   *  `./experiments/models_parameters/Reproduce/`. <br>
-    All parameters for IGNN and IGNNE at each epoch during the training process and the parameters of final well-trained models, which can be used to reproduce the experimental results in this paper.  
+    All parameters for IGNN and IGNNE models at each epoch during the training process and the parameters of final well-trained IGNN and IGNNE models, which can be used to reproduce the experimental results in this paper.  
 # Experiments
 ## Training and evaluation of IGNN(IGNNE) model on the raw data  
 #### 1. Pre-validation <br>
