@@ -98,7 +98,7 @@ The main components of the source code as following:
 # Experiments
 ## Training and evaluation of IGNN(IGNNE) model on the raw data  
 #### 1. Pre-validation <br>
-In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-cross validation.   
+In the pre-validation experiments, the model will be trained and validated within the FMU dataset by 3-fold cross validation.   
 
 To launch the pre-validation experiments for IGNN model within the activated virtual environment(IGNN):    
 ```bash  
@@ -113,7 +113,7 @@ python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNN'" -t "MODEL_STATE='Result'"
 ```      
-The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
+The predictions of the well-trained IGNN model on the training and test data for each fold in the 3-fold cross validation will be saved in specific Excel files in the `./experiments/experiment_results/` directory:
 ```  
 pre_train_cohort_fold1_IGNN.xlsx;  pre_test_cohort_fold1_IGNN.xlsx
 pre_train_cohort_fold2_IGNN.xlsx;  pre_test_cohort_fold2_IGNN.xlsx
@@ -166,7 +166,7 @@ python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Reproduce'"
 ```  
-Expected performance of IGNNE for the 3-cross validation in the pre-validation experiments:  
+Expected performance of IGNNE for the 3-fold cross validation in the pre-validation experiments:  
 ```   
 >>> TrainAuc: 0.895, TrainSen: 0.862, TrainSpe: 0.828, TrainHR: 10.267, TrainC: 0.792, 
     TestAuc: 0.900, TestSen: 0.816, TestSpe: 0.878, TestHR: 14.44, TestC: 0.826
