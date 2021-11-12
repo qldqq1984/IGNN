@@ -1,5 +1,6 @@
 # library(ggplot2)
 # library(survminer)
+# library(Rcpp)
 # library(rms)
 # library(openxlsx)
 warnings('off')
@@ -25,6 +26,7 @@ require_library <- function(library_name){
 # the necessary libraries
 require_library("ggplot2")
 require_library("survminer")
+require_library("Rcpp")
 require_library("rms")
 require_library("openxlsx")
 
