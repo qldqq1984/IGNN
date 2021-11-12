@@ -69,6 +69,9 @@ The raw data includes TACS coding observed from MPM imaging, clinical and follow
 *	***Endocrine***: **0**, No; **1**, Yes.
 *	***Radiation***: **0**, No; **1**, Yes.
 *	***Targeted***: **0**, No; **1**, Yes.
+*	***ER***: **0**, negative; **1**, positive.
+*	***PR***: **0**, negative; **1**, positive.
+*	***HER2***: **0**, negative; **1**, positive.
 
 
 
