@@ -10,7 +10,7 @@ Download the NVIDIA CUDA Toolkit from https://developer.nvidia.com/cuda-toolkit-
 * Anaconda3  
 Download the Anaconda3 with python 3.8 version (data science toolkit to perform Python/R data science and machine learning) from https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe and install it for windows OS with the installation Guide https://docs.continuum.io/anaconda/install/windows/
 *	Python = 3.8.3
-*	lifelines = 0.26.0,  natsort = 7.1.1,  openpyxl = 3.0.9,  bitarray = 2.3.4,  dec2bin = 1.0.4
+*	lifelines = 0.26.0,  natsort = 7.1.1,  openpyxl = 3.0.9,  bitarray = 2.3.4,  dec2bin = 1.0.4,  toml = 0.10.2
 *	PyTorch = 1.6.0,  torchvision = 0.7.0
 *	Torch-geometric = 1.6.1, 
 *	Torch-cluster = 1.5.8,  Torch-scatter = 2.0.5,  Torch-sparse = 0.6.8,  Torch-spline-conv = 1.2.0   
