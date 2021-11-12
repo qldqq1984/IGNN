@@ -35,7 +35,7 @@ windowsFonts(HEL=windowsFont("Helvetica CE 55 Roman"),
 
 
 dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
-Data_file = paste0(dir_root,"/Souce Data/Figure_S10/Figure_S10.xlsx")
+Data_file = paste0(dir_root,"/Source Data/Figure_S10/Figure_S10.xlsx")
 
 TACS_data <- read.xlsx( Data_file , sheet = "TACS_percentages")
 
