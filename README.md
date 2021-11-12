@@ -61,6 +61,10 @@ The raw data includes TACS coding observed from MPM imaging, clinical and follow
 ***Note:*** To simplify the input, some clinical and follow-up information were assigned with a value in the *.xlsx files: <br>
 *	Type (Molecular subtype): 1, Luminal A; 2, Luminal B; 3, HER2 enriched; 4, Triple Negative.
 *	Size (Tumor size): 1, ≤ 2cm; 2, 2-5cm; 3 > 2cm.
+*	Lym (Lymph node metastasis): 1, 0; 2, 1-3; 3, ≥ 4.
+*	Stage (Clinical stage): 1, Ⅰ; 2, Ⅱ; 3, Ⅲ.
+*	Grade (Histological grade): 1, G1; 2, G2; 3, G3.
+
 
 # Source code
 The source code related to the training and evaluation of the IGNN and IGNNE models is deposited in the `./experiments` directory, and the source code provides the following content and methods:  
