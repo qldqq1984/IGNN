@@ -42,7 +42,7 @@ torch_scatter-2.0.5-cp38-cp38-win_amd64.whl
 torch_sparse-0.6.8-cp38-cp38-win_amd64.whl
 torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
 ```  
-and install them within the activated virtual environment(IGNN):  
+and install them within the activated virtual environment (IGNN):  
 ```bash  
 pip install ./torch_scatter-2.0.5-cp38-cp38-win_amd64.whl
 pip install ./torch_sparse-0.6.8-cp38-cp38-win_amd64.whl
