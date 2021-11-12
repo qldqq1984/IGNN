@@ -59,6 +59,7 @@ We strongly recommend installing Rstudio after installing R, which is an integra
 The raw data includes TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU). By default, these data are saved as xlsx format files in the `./experiments/Patients_Information/DataSets_995/` directory, where the data of patients with DFS less than 5 years are placed in `./experiments/Patients_Information/DataSets_995/class_1/`(in which, from FMU(1).xlsx to FMU(261).xlsx for FMU patients and from HMU(1).xlsx to HMU(96).xlsx for HMU patients) while the data of patients with DFS greater than 5 years are placed in
 `./experiments/ Patients_Information DataSets_995/class_2/` (in which, from FMU(1) .xlsx to FMU(470).xlsx for FMU patients and from HMU(1).xlsx to HMU(168).xlsx for HMU patients). <br>
 ***Note:*** To simplify the input, some clinical and follow-up information were assigned with a value in the *.xlsx files: <br>
+* ***y***: **0**, DFS > 5 years; **1**, DFS ≤ 5 years.
 *	***Type*** (Molecular subtype): **1**, Luminal A; **2**, Luminal B; **3**, HER2 enriched; **4**, Triple Negative.
 *	***Size*** (Tumor size): **1**, ≤ 2cm; **2**, 2-5cm; **3**, > 2cm.
 *	***Lym*** (Lymph node metastasis): **1**, 0; **2**, 1-3; **3**, ≥ 4.
