@@ -57,7 +57,7 @@ R is a free software environment for statistical computing and graphics. It comp
 We strongly recommend installing Rstudio after installing R, which is an integrated development environment (IDE) for R, including console, workspace management and tools for drawing and debugging, and is convenient for users to directly execute and debug R code. Download and install the free Rstudio Desktop (verson 2021.09.0-351) for windows OS from https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe. Run Rstudio and click "Tools" -> "Global Options" -> "General" -> "Change" (Basic panel) in turn to select a specific version of R software (verson 3.6.0).  
 # Raw Data
 The raw data includes TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU). By default, these data are saved as excel files in the `./experiments/Patients_Information/DataSets_995/` directory, where the data of patients with DFS(disease-free survival) ≤ 5 years are placed in `./experiments/Patients_Information/DataSets_995/class_1/`(in which, from FMU(1).xlsx to FMU(261).xlsx for FMU patients and from HMU(1).xlsx to HMU(96).xlsx for HMU patients) while the data of patients with DFS > 5 years are placed in
-`./experiments/ Patients_Information DataSets_995/class_2/` (in which, from FMU(1) .xlsx to FMU(470).xlsx for FMU patients and from HMU(1).xlsx to HMU(168).xlsx for HMU patients). <br>
+`./experiments/Patients_Information/DataSets_995/class_2/` (in which, from FMU(1) .xlsx to FMU(470).xlsx for FMU patients and from HMU(1).xlsx to HMU(168).xlsx for HMU patients). <br>
 ***Note:*** To simplify the input, some clinical and follow-up information were assigned with a value in the *.xlsx files: <br>
 * ***y*** : **0**, DFS > 5 years; **1**, DFS ≤ 5 years.
 *	***Type*** (Molecular subtype): **1**, Luminal A; **2**, Luminal B; **3**, HER2 enriched; **4**, Triple Negative.
@@ -89,7 +89,7 @@ The main components of the source code as following:
   *  `main_user.py`. <br>
     Template program for the IGNN(IGNNE) model to be trained and verified on the user-defined data.    
 
-  *  `./experiments/Patients_Informatio/DataSets_995/`. <br>
+  *  `./experiments/Patients_Information/DataSets_995/`. <br>
     The raw data including TACS coding observed from MPM imaging, clinical and follow-up information of 995 patients from Fujian Medical University Union Hospital(FMU) and Harbin Medical University Cancer Hospital(HMU).  
 
   *  `./experiments/Patients_Information/DataSets_demo/`. <br>
@@ -102,7 +102,7 @@ The main components of the source code as following:
     This directory saves the specific graphdatasets generated from the raw data (TACS_G) and the user-defined data (User_G).  
 
   *  `./experiments/models/`. <br>
-    The directory includes the architecture of GNNGruConv and IGNN(IGNNE) models with the functional modules for model adaptive training.
+    The directory includes the architecture of GNNGruConv layer and IGNN(IGNNE) model with the functional modules for model adaptive training.
 
   *  `./experiments/experiment_utils/`. <br>
     The directory includes the functional modules for analyzing and evaluating the prognostic value of the model output (i.e. AUC, Sensitivity, Specificity, HR, Cindex). 
