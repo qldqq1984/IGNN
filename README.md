@@ -50,7 +50,7 @@ pip install ./torch_cluster-1.5.8-cp38-cp38-win_amd64.whl
 pip install ./torch_spline_conv-1.2.0-cp38-cp38-win_amd64.whl
 ```
 *	R software >= 3.6.0
-*	RStudio >= 1.4.0     
+*	Rstudio >= 1.4.0     
 
 R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of Linux platforms, Windows and MacOS. Download and install the R software (verson 3.6.0) for windows OS from https://cloud.r-project.org/bin/windows/base/old/3.6.0/R-3.6.0-win.exe.    
 
