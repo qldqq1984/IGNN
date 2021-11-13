@@ -1,5 +1,4 @@
 # library(timeROC)
-# library(tidyverse)
 # library(pROC)
 # library(ROCit)
 # library(openxlsx)
@@ -29,7 +28,6 @@ require_library <- function(library_name){
 require_library("timeROC")
 require_library("pROC")
 require_library("ROCit")
-require_library("tidyverse")
 require_library("openxlsx")
 
 
@@ -53,7 +51,7 @@ ROCStatFunc2 <- function(dat, group, threshold = 0, var,retype = c("threshold", 
         return(result)
 }
 
-quiteROCFunc <- quietly(ROCStatFunc2)
+quiteROCFunc <- ROCStatFunc2
 
 
 # Training (n=731) 
@@ -67,29 +65,37 @@ IGNNE_data_training <- read.xlsx( Data_file , sheet = "IGNNE_training_cohort")
 Y = TACS_data_training$y
 risk_groups = TACS_data_training$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.3107)$result
+TACS_training_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.3107)
+print("TACS_training_result............")
+print(TACS_training_result)
 
 
 # Evaluation for the Nomogram model on training cohort
 Y = Nomogram_data_training$y
 risk_groups = Nomogram_data_training$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5421)$result
+Nomogram_training_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5421)
+print("Nomogram_training_result............")
+print(Nomogram_training_result)
 
 
 # Evaluation for the IGNN model on training cohort
 Y = IGNN_data_training$y
 risk_groups = IGNN_data_training$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 1.156)$result
+IGNN_training_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 1.156)
+print("IGNN_training_result............")
+print(IGNN_training_result)
+
 
 
 # Evaluation for the IGNN model on training cohort
 Y = IGNNE_data_training$y
 risk_groups = IGNNE_data_training$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.4299)$result
-
+IGNNE_training_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.4299)
+print("IGNNE_training_result............")
+print(IGNNE_training_result)
 
 
 
@@ -105,25 +111,38 @@ IGNNE_data_validation <- read.xlsx( Data_file , sheet = "IGNNE_validation_cohort
 Y = TACS_data_validation$y
 risk_groups = TACS_data_validation$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.3107)$result
+TACS_validation_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.3107)
+print("TACS_validation_result............")
+print(TACS_validation_result)
+
 
 
 # Evaluation for the Nomogram model on validation cohort
 Y = Nomogram_data_validation$y
 risk_groups = Nomogram_data_validation$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5421)$result
+Nomogram_validation_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5421)
+print("Nomogram_validation_result............")
+print(Nomogram_validation_result)
+
 
 
 # Evaluation for the IGNN model on validation cohort
 Y = IGNN_data_validation$y
 risk_groups = IGNN_data_validation$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 1.156)$result
+IGNN_validation_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 1.156)
+print("IGNN_validation_result............")
+print(IGNN_validation_result)
+
 
 
 # Evaluation for the IGNN model on validation cohort
 Y = IGNNE_data_validation$y
 risk_groups = IGNNE_data_validation$model_score
 data <- data.frame(Y,risk_groups)
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.4299)$result
+IGNNE_validation_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = -0.4299)
+print("IGNNE_validation_result............")
+print(IGNNE_validation_result)
+
+
