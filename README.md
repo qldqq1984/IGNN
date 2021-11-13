@@ -258,8 +258,7 @@ For more detailed about the configuration of models and experiments, please refe
 ```bash 
 python main.py -h
 ``` 
-***Note:*** The training and validation of IGNN (IGNNE) model can be executed with windows or linux OS on both CPU and GPU. In this paper, IGNN and IGNNE were implemented by default with windows OS on CPU in all experiments to ensure reproducibility of the experimental results on the raw data as presented in the paper. The experiments are executed on CPU by default, and if the program needs to be executed on GPU, please set  
-`-t "PROCESSUNIT_STATE='GPU'"`.   
+***Note:*** The training and validation of IGNN (IGNNE) model can be executed with windows or linux OS using either CPU or GPU. In this paper, IGNN and IGNNE were implemented by default with windows OS using CPU in all experiments to ensure reproducibility of the experimental results as presented in the paper. If the program needs to be executed using GPU, please set `-t "PROCESSUNIT_STATE='GPU'"`.   
 Due to the variability of different operating systems and hardware platforms, the model output and performance of IGNN and IGNNE models trained and validated from scratch on different devices may have variability. Please load the models with the parameters of well-trained models in the default configuration to reproduce the experimental results of this paper as described before.
  
 ## Training and evaluation of IGNN(IGNNE) model on the user-defined data  
