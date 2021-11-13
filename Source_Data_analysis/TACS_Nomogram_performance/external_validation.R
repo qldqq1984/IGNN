@@ -1,4 +1,4 @@
-# library(xlsx)
+# library(openxlsx)
 # library(glmnet)
 # library(foreign)
 # library(survminer)
@@ -25,7 +25,7 @@ require_library <- function(library_name){
 }
 
 # the necessary libraries
-require_library("xlsx")
+require_library("openxlsx")
 require_library("glmnet")
 require_library("foreign")
 require_library("survminer")
@@ -40,8 +40,8 @@ Patient_information_file = paste0(dir_root,"/Source Data/TACS_Nomogram_performan
 
 
 # external validation experiment results of TACS prognostic model
-train_cohort <- read.xlsx( Patient_information_file, sheetName = "FMU_dataset", skipEmptyRows = TRUE)
-test_cohort <- read.xlsx( Patient_information_file, sheetName = "HMU_dataset", skipEmptyRows = TRUE)
+train_cohort <- read.xlsx( Patient_information_file, sheet = "FMU_dataset", skipEmptyRows = TRUE)
+test_cohort <- read.xlsx( Patient_information_file, sheet = "HMU_dataset", skipEmptyRows = TRUE)
 TACS_train_cohort_prediction <- TACS_model(dataset=train_cohort, train=TRUE, model.coef={}, cutoff = 0.0 )
 TACS_test_cohort_prediction <- TACS_model(dataset=test_cohort, train=FALSE, model.coef = TACS_train_cohort_prediction$coef, cutoff = TACS_train_cohort_prediction$cutoff )
 TACS_train_cohort_prediction_results <- data.frame(id = train_cohort$id, y = train_cohort$y, DFS = train_cohort$DFS, STATUS = train_cohort$STATUS, model_score = TACS_train_cohort_prediction$model_score, model_risk = TACS_train_cohort_prediction$model_risk)
