@@ -1,4 +1,5 @@
-# library(xlsx)
+
+# library(readxl)
 # library(glmnet)
 # library(foreign)
 # library(survminer)
@@ -25,7 +26,7 @@ require_library <- function(library_name){
 }
 
 # the necessary libraries
-require_library("xlsx")
+require_library("readxl")
 require_library("glmnet")
 require_library("foreign")
 require_library("survminer")
@@ -39,8 +40,8 @@ Patient_information_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/
 # implement pre-validation experiment with 3-cross validation for IGNN and IGNNE prognostic model 
 pre_validation_experiment <- function(cv_test_cohort_file, model_type){
   
-  train_cohort <- read.xlsx( cv_train_cohort_file, sheetName = "1", skipEmptyRows = TRUE)
-  test_cohort <- read.xlsx( cv_test_cohort_file, sheetName = "1", skipEmptyRows = TRUE)
+  train_cohort <- read_excel( cv_train_cohort_file, sheet = 1)
+  test_cohort <- read_excel( cv_test_cohort_file, sheet = 1)
 
   if (model_type== "IGNN"){ 
       train_cohort_prediction <- IGNN_model(dataset=train_cohort, train=TRUE,  cutoff = 0.0 )
@@ -88,4 +89,5 @@ for (fold_id in 1:3){
   # write.xlsx(x = results$test_cohort_prediction, file = cv_results_file,sheetName =  paste0("fold",fold_id,"_test_cohort"), row.names = F, append=TRUE)
   
 }
+
 
