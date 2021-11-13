@@ -1,4 +1,5 @@
-# library(xlsx)
+# library(openxlsx)
+# library(readxl)
 # library(glmnet)
 # library(foreign)
 # library(survminer)
@@ -25,7 +26,8 @@ require_library <- function(library_name){
 }
 
 # the necessary libraries
-require_library("xlsx")
+require_library("openxlsx")
+require_library("readxl")
 require_library("glmnet")
 require_library("foreign")
 require_library("survminer")
@@ -70,11 +72,11 @@ for (fold_id in 1:3){
 
   FMU_dataset <- read.xlsx( Patient_information_file, sheetName = "FMU_dataset", skipEmptyRows = TRUE)
   IGNN_cv_train_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_train_cohort_fold",fold_id,"_IGNN.xlsx")
-  IGNN_cv_train_cohort <- read.xlsx( IGNN_cv_train_cohort_file, sheetName = "1", skipEmptyRows = TRUE)
+  IGNN_cv_train_cohort <- read_excel( IGNN_cv_train_cohort_file, sheet = 1)
   cv_train_cohort <- FMU_dataset[IGNN_cv_train_cohort$Graph_id, ] # training data of TACS and Nomogram models for each cross validation in pre-validation
   
   IGNN_cv_test_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_test_cohort_fold",fold_id,"_IGNN.xlsx")
-  IGNN_cv_test_cohort <- read.xlsx( IGNN_cv_test_cohort_file, sheetName = "1", skipEmptyRows = TRUE)
+  IGNN_cv_test_cohort <- read_excel( IGNN_cv_test_cohort_file, sheet = 1)
   cv_test_cohort <- FMU_dataset[IGNN_cv_test_cohort$Graph_id, ]  # validation data of TACS and Nomogram models for each cross validation in pre-validation
   
   TACS_cv_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/pre_validation_TACS_model_prediction.xlsx")
