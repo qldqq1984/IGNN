@@ -1,5 +1,4 @@
 # library(timeROC)
-# library(tidyverse)
 # library(pROC)
 # library(ROCit)
 # library(openxlsx)
@@ -29,7 +28,6 @@ require_library <- function(library_name){
 require_library("timeROC")
 require_library("pROC")
 require_library("ROCit")
-require_library("tidyverse")
 require_library("openxlsx")
 
 
@@ -57,7 +55,7 @@ ROCStatFunc2 <- function(dat, group, threshold = 0, var,retype = c("threshold", 
         return(result)
 }
 
-quiteROCFunc <- quietly(ROCStatFunc2)
+quiteROCFunc <- ROCStatFunc2
 
 ###############
 TACS_data_fold1 <- read.xlsx( Data_file , sheet = "TACS_fold1")
@@ -70,7 +68,9 @@ risk_groups = TACS_data$model_risk
 data <- data.frame(Y,risk_groups)
 
 # Evaluation for the TACS model
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)$result
+TACS_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)
+print("TACS_result............")
+print(TACS_result)
 
 
 ##############
@@ -84,7 +84,9 @@ risk_groups = Nomogram_data$model_risk
 data <- data.frame(Y,risk_groups)
 
 # Evaluation for the Nomogram model
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)$result
+Nomogram_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)
+print("Nomogram_result............")
+print(Nomogram_result)
 
 
 ###############
@@ -98,7 +100,9 @@ risk_groups = IGNN_data$model_risk
 data <- data.frame(Y,risk_groups)
 
 # Evaluation for the IGNN model
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)$result
+IGNN_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)
+print("IGNN_result............")
+print(IGNN_result)
 
 
 ###############
@@ -112,8 +116,9 @@ risk_groups = IGNNE_data$model_risk
 data <- data.frame(Y,risk_groups)
 
 # Evaluation for the IGNNE model
-quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)$result
-
+IGNNE_result <- quiteROCFunc( data, group = "Y", var = "risk_groups", threshold = 0.5)
+print("IGNNE_result............")
+print(IGNNE_result)
 
 
 
