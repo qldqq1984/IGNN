@@ -1,4 +1,3 @@
-# library(xlsx)
 # library(glmnet)
 # library(foreign)
 # library(survminer)
@@ -27,7 +26,6 @@ require_library <- function(library_name){
 }
 
 # the necessary libraries
-require_library("xlsx")
 require_library("glmnet")
 require_library("foreign")
 require_library("survminer")
