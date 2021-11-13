@@ -70,7 +70,7 @@ pre_validation_experiment <- function(cv_train_cohort, cv_test_cohort){
 
 for (fold_id in 1:3){
 
-  FMU_dataset <- read.xlsx( Patient_information_file, sheetName = "FMU_dataset", skipEmptyRows = TRUE)
+  FMU_dataset <- read.xlsx( Patient_information_file, sheet = "FMU_dataset", skipEmptyRows = TRUE)
   IGNN_cv_train_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_train_cohort_fold",fold_id,"_IGNN.xlsx")
   IGNN_cv_train_cohort <- read_excel( IGNN_cv_train_cohort_file, sheet = 1)
   cv_train_cohort <- FMU_dataset[IGNN_cv_train_cohort$Graph_id, ] # training data of TACS and Nomogram models for each cross validation in pre-validation
