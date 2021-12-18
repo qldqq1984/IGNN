@@ -32,7 +32,7 @@ require_library("survminer")
 require_library("here")
 
 
-# implement external validation experiment for TACS and IGNNE Nomogram model 
+# implement external validation experiment for TACS and Nomogram model 
 dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
 source(paste0(dir_root,'/Source_Data_analysis/TACS_Nomogram_performance/TACS_Nomogram_models.R'), encoding = 'UTF-8') 
 Patient_information_file = paste0(dir_root,"/Source Data/TACS_Nomogram_performance/Patient_information.xlsx")
