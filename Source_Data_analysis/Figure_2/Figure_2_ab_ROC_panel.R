@@ -176,7 +176,7 @@ ROC_panel_tumorsize_2cm <- ROC_panel(TACS_ROC, Nomogram_ROC, IGNN_ROC, IGNNE_ROC
 
 
 #ggsave(ROC_panel_training, file="Fig_2_a_4.tiff",width=20, height=6)
-#ggsave(ROC_panel_validation, file="Fig_2_a_78.tiff",width=20, height=6)
+#ggsave(ROC_panel_validation, file="Fig_2_a_8.tiff",width=20, height=6)
 #ggsave(ROC_panel_tumorsize_5cm, file="Fig_2_b_4.tiff",width=20, height=6)
 #ggsave(ROC_panel_tumorsize_2to5cm, file="Fig_2_b_8.tiff",width=20, height=6)
 #ggsave(ROC_panel_tumorsize_2cm, file="Fig_2_b_12.tiff",width=20, height=6)
