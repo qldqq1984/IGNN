@@ -79,8 +79,8 @@ for (fold_id in 1:3){
   IGNN_cv_test_cohort <- read_excel( IGNN_cv_test_cohort_file, sheet = 1)
   cv_test_cohort <- FMU_dataset[IGNN_cv_test_cohort$Graph_id, ]  # validation data of TACS and Nomogram models for each cross validation in pre-validation
   
-  TACS_cv_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/pre_validation_TACS_model_prediction.xlsx")
-  Nomogram_cv_results_file = paste0(dir_root,"/Source Data/TACS_Nomogram_performance/pre_validation_Nomogram_model_prediction.xlsx")
+  TACS_cv_results_file = paste0(dir_root,"/Source Data/Figure_S1/pre_validation_TACS_model_prediction.xlsx")
+  Nomogram_cv_results_file = paste0(dir_root,"/Source Data/Figure_S1/pre_validation_Nomogram_model_prediction.xlsx")
 
   results <- pre_validation_experiment(cv_train_cohort, cv_test_cohort)
 
