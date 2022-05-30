@@ -46,7 +46,7 @@ TACS_train_cohort_prediction <- TACS_model(dataset=train_cohort, train=TRUE, mod
 TACS_test_cohort_prediction <- TACS_model(dataset=test_cohort, train=FALSE, model.coef = TACS_train_cohort_prediction$coef, cutoff = TACS_train_cohort_prediction$cutoff )
 TACS_train_cohort_prediction_results <- data.frame(id = train_cohort$id, y = train_cohort$y, DFS = train_cohort$DFS, STATUS = train_cohort$STATUS, model_score = TACS_train_cohort_prediction$model_score, model_risk = TACS_train_cohort_prediction$model_risk)
 TACS_test_cohort_prediction_results <- data.frame(id = test_cohort$id, y = test_cohort$y, DFS = test_cohort$DFS, STATUS = test_cohort$STATUS,  model_score = TACS_test_cohort_prediction$model_score, model_risk = TACS_test_cohort_prediction$model_risk)
-TACS_results_file = paste0(dir_root,"/Source Data/TACS_Nomogram_performance/external_validation_TACS_model_prediction.xlsx")
+TACS_results_file = paste0(dir_root,"/Source Data/Figure_S1/external_validation_TACS_model_prediction.xlsx")
 # write.xlsx(x = TACS_train_cohort_prediction_results, file = TACS_results_file,sheetName = "train_cohort", row.names = F)
 # write.xlsx(x = TACS_test_cohort_prediction_results, file = TACS_results_file,sheetName = "test_cohort", row.names = F, append=TRUE)
 
@@ -56,7 +56,7 @@ Nomogram_train_cohort_prediction <- Nomogram_model(dataset=train_cohort, TACS_sc
 Nomogram_test_cohort_prediction <- Nomogram_model(dataset=test_cohort, TACS_score=TACS_test_cohort_prediction$model_score, train=FALSE, allcoefs=Nomogram_train_cohort_prediction$coefs, cutoff = Nomogram_train_cohort_prediction$cutoff )
 Nomogram_train_cohort_prediction_results <- data.frame(id = train_cohort$id, y = train_cohort$y, DFS = train_cohort$DFS, STATUS = train_cohort$STATUS, model_score = Nomogram_train_cohort_prediction$model_score, model_risk = Nomogram_train_cohort_prediction$model_risk)
 Nomogram_test_cohort_prediction_results <- data.frame(id = test_cohort$id, y = test_cohort$y, DFS = test_cohort$DFS, STATUS = test_cohort$STATUS,  model_score = Nomogram_test_cohort_prediction$model_score, model_risk = Nomogram_test_cohort_prediction$model_risk)
-Nomogram_results_file = paste0(dir_root,"/Source Data/TACS_Nomogram_performance/external_validation_Nomogram_model_prediction.xlsx")
+Nomogram_results_file = paste0(dir_root,"/Source Data/Figure_S1/external_validation_Nomogram_model_prediction.xlsx")
 # write.xlsx(x = Nomogram_train_cohort_prediction_results, file = Nomogram_results_file,sheetName = "train_cohort", row.names = F)
 # write.xlsx(x = Nomogram_test_cohort_prediction_results, file = Nomogram_results_file,sheetName = "test_cohort", row.names = F, append=TRUE)
 
