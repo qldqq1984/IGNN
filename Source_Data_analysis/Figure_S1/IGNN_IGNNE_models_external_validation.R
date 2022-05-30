@@ -35,8 +35,8 @@ require_library("here")
 
 # implement external validation experiment for IGNN and IGNNE prognostic model 
 dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
-source(paste0(dir_root,'/Source_Data_analysis/IGNN_IGNNE_performance/IGNN_IGNNE_models.R'), encoding = 'UTF-8') 
-Patient_information_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/Patient_information.xlsx")
+source(paste0(dir_root,'/Source_Data_analysis/Figure_S1/IGNN_IGNNE_models.R'), encoding = 'UTF-8') 
+Patient_information_file = paste0(dir_root,"/Source Data/Figure_S1/Patient_information.xlsx")
 
 
 
@@ -50,7 +50,7 @@ IGNN_train_cohort_prediction <- IGNN_model(dataset=IGNN_train_cohort, train=TRUE
 IGNN_test_cohort_prediction <- IGNN_model(dataset=IGNN_test_cohort, train=FALSE, cutoff = IGNN_train_cohort_prediction$cutoff )
 IGNN_train_cohort_prediction_results <- data.frame(id = IGNN_train_cohort$Graph_id, y = IGNN_train_cohort$y, DFS = IGNN_train_cohort$DFS, STATUS = IGNN_train_cohort$STATUS, model_score = IGNN_train_cohort$model_score, model_risk = IGNN_train_cohort$model_risk)
 IGNN_test_cohort_prediction_results <- data.frame(id = IGNN_test_cohort$Graph_id, y = IGNN_test_cohort$y, DFS = IGNN_test_cohort$DFS, STATUS = IGNN_test_cohort$STATUS,  model_score = IGNN_test_cohort$model_score, model_risk = IGNN_test_cohort$model_risk)
-IGNN_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/external_validation_IGNN_model_prediction.xlsx")
+IGNN_results_file = paste0(dir_root,"/Source Data/Figure_S1/external_validation_IGNN_model_prediction.xlsx")
 
 # write.xlsx(x = IGNN_train_cohort_prediction_results, file = IGNN_results_file,sheetName = "train_cohort", row.names = F)
 # write.xlsx(x = IGNN_test_cohort_prediction_results, file = IGNN_results_file,sheetName = "test_cohort", row.names = F, append=TRUE)
@@ -66,7 +66,7 @@ IGNNE_train_cohort_prediction <- IGNNE_model(dataset=IGNNE_train_cohort, train=T
 IGNNE_test_cohort_prediction <- IGNNE_model(dataset=IGNNE_test_cohort, train=FALSE, cutoff = IGNNE_train_cohort_prediction$cutoff )
 IGNNE_train_cohort_prediction_results <- data.frame(id = IGNNE_train_cohort$Graph_id, y = IGNNE_train_cohort$y, DFS = IGNNE_train_cohort$DFS, STATUS = IGNNE_train_cohort$STATUS, model_score = IGNNE_train_cohort$model_score, model_risk = IGNNE_train_cohort$model_risk)
 IGNNE_test_cohort_prediction_results <- data.frame(id = IGNNE_test_cohort$Graph_id, y = IGNNE_test_cohort$y, DFS = IGNNE_test_cohort$DFS, STATUS = IGNNE_test_cohort$STATUS,  model_score = IGNNE_test_cohort$model_score, model_risk = IGNNE_test_cohort$model_risk)
-IGNNE_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/external_validation_IGNNE_model_prediction.xlsx")
+IGNNE_results_file = paste0(dir_root,"/Source Data/Figure_S1/external_validation_IGNNE_model_prediction.xlsx")
 
 # write.xlsx(x = IGNNE_train_cohort_prediction_results, file = IGNNE_results_file,sheetName = "train_cohort", row.names = F)
 # write.xlsx(x = IGNNE_test_cohort_prediction_results, file = IGNNE_results_file,sheetName = "test_cohort", row.names = F, append=TRUE)
