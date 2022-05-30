@@ -34,8 +34,8 @@ require_library("here")
 
 
 dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
-source(paste0(dir_root,'/Source_Data_analysis/IGNN_IGNNE_performance/IGNN_IGNNE_models.R'), encoding = 'UTF-8') 
-Patient_information_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/Patient_information.xlsx")
+source(paste0(dir_root,'/Source_Data_analysis/Figure_S1/IGNN_IGNNE_models.R'), encoding = 'UTF-8') 
+Patient_information_file = paste0(dir_root,"/Source Data/Figure_S1/Patient_information.xlsx")
 
 # implement pre-validation experiment with 3-cross validation for IGNN and IGNNE prognostic model 
 pre_validation_experiment <- function(cv_test_cohort_file, model_type){
@@ -65,7 +65,7 @@ for (fold_id in 1:3){
   
   cv_train_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_train_cohort_fold",fold_id,"_IGNN.xlsx")
   cv_test_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_test_cohort_fold",fold_id,"_IGNN.xlsx")
-  cv_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/pre_validation_IGNN_model_prediction.xlsx")
+  cv_results_file = paste0(dir_root,"/Source Data/Figure_S1/pre_validation_IGNN_model_prediction.xlsx")
   
   results <- pre_validation_experiment(cv_test_cohort_file, model_type = "IGNN")
   
@@ -81,7 +81,7 @@ for (fold_id in 1:3){
   
   cv_train_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_train_cohort_fold",fold_id,"_IGNNE.xlsx")
   cv_test_cohort_file = paste0(dir_root,"/experiments/experiment_results/pre_test_cohort_fold",fold_id,"_IGNNE.xlsx")
-  cv_results_file = paste0(dir_root,"/Source Data/IGNN_IGNNE_performance/pre_validation_IGNNE_model_prediction.xlsx")
+  cv_results_file = paste0(dir_root,"/Source Data/Figure_S1/pre_validation_IGNNE_model_prediction.xlsx")
   
   results <- pre_validation_experiment(cv_test_cohort_file, model_type = "IGNNE")
   
