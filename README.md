@@ -144,7 +144,7 @@ python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'
 ```  
 Then launch the procedure as following:  
 ```bash
-python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNN'E" -t "MODEL_STATE='Result'" 
+python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='1'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'" 
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='2'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 python main.py -t "EXPERIMENT_TYPE='pre'" -t "FOLD_N='3'" -t "MODEL_TYPE='IGNNE'" -t "MODEL_STATE='Result'"
 ```  
