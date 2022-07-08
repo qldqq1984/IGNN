@@ -198,8 +198,10 @@ def experiment_results_save(device, args,  dataset,  model, data_loader,TRAIN_DA
                               'Chemotherapy':Tindicators[:,6], 'Endocrine':Tindicators[:,7], 'Radiation':Tindicators[:,8], 'Targeted':Tindicators[:,9],\
                               # 'ER':Tindicators[:,10],'PR':Tindicators[:,11],'HER2':Tindicators[:,12],\
                               'model_score': 1*pre_score[:,0].T,'model_risk':pre_risk.T} )
-
-
+        
+    results.sort_values(by=['Graph_id'],inplace=True)  
+    results.drop('Graph_id', axis=1,inplace=True)
+    
     # results_file = '{:s}{:s}_{:s}_cohort_{:s}.xlsx'.format(args.EXPERIMENT_RESULTS_DIR, args.EXPERIMENT_TYPE,  "train" if TRAIN_DATA==True else "test",  args.MODEL_TYPE)    
     results_file = '{:s}{:s}_{:s}_cohort_{:s}{:s}.xlsx'.format(args.EXPERIMENT_RESULTS_DIR, args.EXPERIMENT_TYPE,  "train" if TRAIN_DATA==True else "test", "fold{:s}_".format(args.FOLD_N) if args.EXPERIMENT_TYPE=="pre" else "",  args.MODEL_TYPE)     
     print("filename....", results_file)
