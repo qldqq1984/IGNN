@@ -36,16 +36,12 @@ windowsFonts(HEL=windowsFont("Helvetica CE 55 Roman"),
 dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
 Data_file = paste0(dir_root,"/Source Data/Figure_S4/Figure_S4.xlsx")
 
-
-Patient_information <-  read.xlsx( Data_file , sheet = "Patient_information")
    
 # pre-validation with 3-cross validation for TACS model on training cohort (n=731) 
 TACS_data_fold1 <- read.xlsx( Data_file , sheet = "TACS_fold1")
 TACS_data_fold2 <- read.xlsx( Data_file , sheet = "TACS_fold2")
 TACS_data_fold3 <- read.xlsx( Data_file , sheet = "TACS_fold3")
-TACS_data <- rbind(TACS_data_fold1, TACS_data_fold2, TACS_data_fold3)
-TACS_information <- Patient_information[TACS_data$id, c(5:17)]
-TACS_data_information <- cbind(TACS_data, TACS_information)
+TACS_data_information <- rbind(TACS_data_fold1, TACS_data_fold2, TACS_data_fold3)
 TACS_data_information$age <- ifelse(TACS_data_information$age  > 50, 1, 0)
 
 # survival analysis
@@ -58,9 +54,7 @@ TACS_plot <- plot(anova(TACS_COX_Survs), what='proportion chisq')
 IGNN_data_fold1 <- read.xlsx( Data_file , sheet = "IGNN_fold1")
 IGNN_data_fold2 <- read.xlsx( Data_file , sheet = "IGNN_fold2")
 IGNN_data_fold3 <- read.xlsx( Data_file , sheet = "IGNN_fold3")
-IGNN_data <- rbind(IGNN_data_fold1, IGNN_data_fold2, IGNN_data_fold3)
-IGNN_information <- Patient_information[IGNN_data$id, c(5:17)]
-IGNN_data_information <- cbind(IGNN_data, IGNN_information)
+IGNN_data_information <- rbind(IGNN_data_fold1, IGNN_data_fold2, IGNN_data_fold3)
 IGNN_data_information$age <- ifelse(IGNN_data_information$age  > 50, 1, 0)
 
 # survival analysis
