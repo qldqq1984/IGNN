@@ -59,7 +59,7 @@ Spearman_analysis <- function(Spearman_data, model_type){
    
    for(i in 1:8)
    {
-      TACS_percentage[[i]] <- Spearman_data[[1+i]];
+      TACS_percentage[[i]] <- Spearman_data[[2+i]];
       TACS <- TACS_percentage[[i]]
       
       Spearman_correlation_coefficients[i]<- cor(x=TACS,y=model_score,method = c("spearman"))
