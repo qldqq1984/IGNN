@@ -38,11 +38,7 @@ dir_root = dirname(dirname(dirname(rstudioapi::getActiveDocumentContext()$path))
 Data_file = paste0(dir_root,"/Source Data/Figure_S10/Figure_S10.xlsx")
 
 TACS_data <- read.xlsx( Data_file , sheet = "TACS_percentages")
-
-
-Patients <- factor(TACS_data$y);
-Patients <- ifelse(Patients ==1, "DFS <= 5 years", "DFS > 5 years")
-
+Patients <- ifelse(TACS_data$DFS <=60, "DFS <= 5 years", "DFS > 5 years")
 
 TACS1_percentage <- data.frame( percentage = as.numeric(TACS_data$TACS1), Patients , type=c(rep("TACS1", 995)) )
 TACS2_percentage <- data.frame( percentage = as.numeric(TACS_data$TACS2), Patients , type=c(rep("TACS2", 995)) )
