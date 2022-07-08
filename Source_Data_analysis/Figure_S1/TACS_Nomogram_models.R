@@ -36,7 +36,7 @@ require_library("survival")
 
 # TACS prognostic model  
 TACS_model <- function(dataset, train=FALSE, model.coef, cutoff ){
-	TACS_percentage <- as.matrix(dataset[,c(18:25)])
+	TACS_percentage <- as.matrix(dataset[,c(17:24)])
   	TACS_model_fit <- data.matrix(Surv(dataset$DFS,dataset$STATUS))
   	TACS_model <- glmnet(TACS_percentage, TACS_model_fit, family = "cox", alpha = 0.0)
 

@@ -54,8 +54,8 @@ pre_validation_experiment <- function(cv_test_cohort_file, model_type){
   }  
   
   results <- {}
-  results$train_cohort_prediction <- data.frame(id = train_cohort$Graph_id, y = train_cohort$y, DFS = train_cohort$DFS, STATUS = train_cohort$STATUS, model_score = train_cohort$model_score, model_risk = train_cohort$model_risk)
-  results$test_cohort_prediction <- data.frame(id = test_cohort$Graph_id, y = test_cohort$y, DFS = test_cohort$DFS, STATUS = test_cohort$STATUS,  model_score = test_cohort$model_score, model_risk = test_cohort$model_risk)
+  results$train_cohort_prediction <- data.frame(y = train_cohort$y, DFS = train_cohort$DFS, STATUS = train_cohort$STATUS, model_score = train_cohort$model_score, model_risk = train_cohort$model_risk)
+  results$test_cohort_prediction <- data.frame(y = test_cohort$y, DFS = test_cohort$DFS, STATUS = test_cohort$STATUS,  model_score = test_cohort$model_score, model_risk = test_cohort$model_risk)
   return(results)
 }
 
